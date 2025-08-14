@@ -1,16 +1,19 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-  echo "用法: fcopy <文件路径>"
+  echo "用法: fcopy <文件1> [文件2] [文件3] ..."
   exit 1
 fi
 
-# 获取文件的绝对路径
-ABSOLUTE_PATH=$(readlink -f "$1")
+URI_LIST=""
 
-# 将文件路径转换为 file:/// 格式
-FILE_URI="file://$ABSOLUTE_PATH"
+for file_path in "$@"; do
+  ABSOLUTE_PATH=$(readlink -f "$file_path")
+  FILE_URI="file://$ABSOLUTE_PATH"
+  URI_LIST+="$FILE_URI"$'\n'
+done
 
-echo -n "$FILE_URI" | xclip -selection clipboard -t text/uri-list
+echo -n "$URI_LIST" | xclip -selection clipboard -t text/uri-list
 
-echo "文件URI已复制到剪贴板: $FILE_URI"
+echo "文件URI已复制到剪贴板:"
+echo "$URI_LIST"
