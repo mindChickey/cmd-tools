@@ -1,5 +1,5 @@
 
-alias pod='podman ps -a'
+alias pod='podman images && echo -e "\n" && podman ps -a'
 
 podman1() {
   podman exec -it "$1" /bin/bash
