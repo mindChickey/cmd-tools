@@ -3,7 +3,7 @@ export PATH=$PATH:/home/wang/mt-dev/mindtrackTools/build/bin
 
 export PATH=$PATH:/home/wang/Videos/node-v18.14.1-linux-x64/bin
 export PATH=$PATH:/home/wang/.bun/bin
-export PATH=$PATH:/home/wang/Videos/nim-2.2.0/bin
+export PATH=$PATH:/home/wang/Videos/nim-2.2.4/bin
 export PATH=$PATH:/home/wang/.nimble/bin
 export PATH=$PATH:/home/wang/.ghcup/bin
 export PATH=$PATH:/home/wang/.cargo/bin

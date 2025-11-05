@@ -14,6 +14,8 @@ gitpush() {
         return $?
     fi
 
+    echo
+    echo
     git push origin master
     
     return $?
