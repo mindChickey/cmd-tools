@@ -28,3 +28,5 @@ alias ssh1='ssh -L 3111:localhost:3111  -L 27018:localhost:27017 server'
 
 alias clang1='clang -O -S -emit-llvm -fno-inline -fno-exceptions'
 alias clang++1='clang1 -O -S -emit-llvm -fno-inline -fno-exceptions'
+
+alias oclip='xclip -selection clipboard -o >>'
