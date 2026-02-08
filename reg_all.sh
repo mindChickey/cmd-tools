@@ -1,10 +1,12 @@
 
-source $(dirname "${BASH_SOURCE[0]}")/reg_bashrc.sh
-source $(dirname "${BASH_SOURCE[0]}")/reg_debug.sh
-source $(dirname "${BASH_SOURCE[0]}")/reg_podman.sh
-source $(dirname "${BASH_SOURCE[0]}")/reg_savecmd.sh
-source $(dirname "${BASH_SOURCE[0]}")/reg_wcmd.sh
-source $(dirname "${BASH_SOURCE[0]}")/reg_cclip.sh
-source $(dirname "${BASH_SOURCE[0]}")/reg_fcopy.sh
-source $(dirname "${BASH_SOURCE[0]}")/reg_gitpush.sh
-source $(dirname "${BASH_SOURCE[0]}")/reg_find1.sh
+CURRENT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]:-${(%):-%x}}")" && pwd)
+
+source "$CURRENT_DIR"/reg_bashrc.sh
+source "$CURRENT_DIR"/reg_debug.sh
+source "$CURRENT_DIR"/reg_podman.sh
+source "$CURRENT_DIR"/reg_savecmd.sh
+source "$CURRENT_DIR"/reg_wcmd.sh
+source "$CURRENT_DIR"/reg_cclip.sh
+source "$CURRENT_DIR"/reg_fcopy.sh
+source "$CURRENT_DIR"/reg_gitpush.sh
+source "$CURRENT_DIR"/reg_find1.sh
