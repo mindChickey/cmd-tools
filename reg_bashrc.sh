@@ -3,12 +3,10 @@ HISTSIZE=100000
 HISTFILESIZE=200000
 HISTTIMEFORMAT="%F %T "
 
-CD()
-{
-  cd $1
+vd(){
+  builtin cd "${1:-$HOME}"
   ls
 }
-alias cd='CD'
 
 alias rm0='/bin/rm'
 alias rmm='trash -rf'

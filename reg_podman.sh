@@ -6,10 +6,11 @@ podman1() {
 }
 
 podvim() {
-  rm /tmp/podman-file
-  podman cp "$1":"$2" /tmp/podman-file
-  vim /tmp/podman-file
-  podman cp /tmp/podman-file "$1":"$2"
-  md5sum /tmp/podman-file
+  local TMP_FILE=~/.podvim_temp
+  trash $TMP_FILE
+  podman cp "$1":"$2" $TMP_FILE
+  vim $TMP_FILE
+  podman cp $TMP_FILE "$1":"$2"
+  md5sum $TMP_FILE
   podman exec "$1" md5sum "$2"
 }
