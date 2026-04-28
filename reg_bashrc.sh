@@ -14,7 +14,7 @@ alias rm="echo Warning: Use \'rm0\' for real delete or \'rmm\' for trash."
 
 set -o vi
 
-push_path(){
+push-path(){
   echo -e "export PATH=\$PATH:$(pwd)" >> ~/.bashrc
   source ~/.bashrc
 }
@@ -23,8 +23,14 @@ alias pss='ps aux | grep '
 alias tss='ss -tulpn | grep '
 
 alias ssh1='ssh -L 3111:localhost:3111  -L 27018:localhost:27017 server'
+alias open-sshfs='sshfs mac.local:/Users/wang ~/mac.home'
+alias open-mongod='mongod --dbpath /var/lib/mongo --logpath /var/log/mongodb/mongod.log --fork'
 
 alias clang1='clang -O -S -emit-llvm -fno-inline -fno-exceptions'
 alias clang++1='clang1 -O -S -emit-llvm -fno-inline -fno-exceptions'
 
-alias oclip='xclip -selection clipboard -o >>'
+clang-asm() {
+  clang -nostdlib -e _start0 "$@" -lasmlib
+}
+
+alias oclip='xclip -selection clipboard -o'
