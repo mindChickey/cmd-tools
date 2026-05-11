@@ -1,8 +1,8 @@
 
 alias pod='podman images && echo -e "\n" && podman ps -a'
 
-podman1() {
-  podman exec -it "$1" /bin/bash
+spodman() {
+  podman exec -it "$2" /bin/bash
 }
 
 podvim() {
@@ -18,5 +18,5 @@ podvim() {
 alias doc='docker images && echo -e "\n" && docker ps -a'
 
 sdocker() {
-  podman exec -it "$2" /bin/bash
+  docker exec -it "$2" /bin/bash
 }
