@@ -10,3 +10,4 @@ source "$CURRENT_DIR"/reg_cclip.sh
 source "$CURRENT_DIR"/reg_fcopy.sh
 source "$CURRENT_DIR"/reg_gitpush.sh
 source "$CURRENT_DIR"/reg_find1.sh
+source "$CURRENT_DIR"/reg_compare_dir.sh
