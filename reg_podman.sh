@@ -14,3 +14,9 @@ podvim() {
   md5sum $TMP_FILE
   podman exec "$1" md5sum "$2"
 }
+
+alias doc='docker images && echo -e "\n" && docker ps -a'
+
+sdocker() {
+  podman exec -it "$2" /bin/bash
+}
