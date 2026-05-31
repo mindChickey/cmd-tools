@@ -11,3 +11,11 @@ source "$CURRENT_DIR"/reg_fcopy.sh
 source "$CURRENT_DIR"/reg_gitpush.sh
 source "$CURRENT_DIR"/reg_find1.sh
 source "$CURRENT_DIR"/reg_compare_dir.sh
+
+if [ -f "$CURRENT_DIR/reg_path.sh" ]; then
+  source "$CURRENT_DIR/reg_path.sh"
+fi
+
+if [ -f "$CURRENT_DIR/reg_proxy.sh" ]; then
+  source "$CURRENT_DIR/reg_proxy.sh"
+fi
