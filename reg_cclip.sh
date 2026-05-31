@@ -23,7 +23,7 @@ cclip() {
     # 注意：我们不再使用 /dev/tty，因为 tee 默认就会输出到标准输出 (即终端)
     # 我们只需要将 tee 的输出重定向到 xclip 即可。
 
-    "$@" 2>&1 | tee >(xclip -selection clipboard)
+    "$@" 2>&1 | tee >(awk '{printf "%s", $0 sub(/[ \t\r\n]+$/, "") ? $0 : $0}' | xclip -selection clipboard)
 
     # 检查命令执行是否成功，如果命令本身失败，不会显示任何成功信息
     if [ ${PIPESTATUS[0]} -ne 0 ]; then
