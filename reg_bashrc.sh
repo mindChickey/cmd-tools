@@ -23,7 +23,9 @@ alias pss='ps aux | grep '
 alias tss='ss -tulpn | grep '
 
 alias ssh1='ssh -L 3111:localhost:3111  -L 27018:localhost:27017 server'
-alias open-sshfs='sshfs mac.local:/Users/wang ~/mac.home'
+alias ssfmac='sshfs mac.local:/Users/wang ~/mac.home'
+alias ssfserver='sshfs server:/root ~/server.root'
+
 alias open-mongod='mongod --dbpath /var/lib/mongo --logpath /var/log/mongodb/mongod.log --fork'
 
 alias clang1='clang -O -S -emit-llvm -fno-inline -fno-exceptions'
