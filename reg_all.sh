@@ -1,18 +1,19 @@
 
 CURRENT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]:-${(%):-%x}}")" && pwd)
 
-source "$CURRENT_DIR"/reg_bashrc.sh
-source "$CURRENT_DIR"/reg_debug.sh
-source "$CURRENT_DIR"/reg_podman.sh
-source "$CURRENT_DIR"/reg_savecmd.sh
-source "$CURRENT_DIR"/reg_wcmd.sh
-source "$CURRENT_DIR"/reg_cclip.sh
-source "$CURRENT_DIR"/reg_fcopy.sh
-source "$CURRENT_DIR"/reg_gitpush.sh
-source "$CURRENT_DIR"/reg_find1.sh
-source "$CURRENT_DIR"/reg_compare_dir.sh
-source "$CURRENT_DIR/reg_proxy.sh"
+source $CURRENT_DIR/reg_bashrc.sh
+source $CURRENT_DIR/reg_debug.sh
+source $CURRENT_DIR/reg_podman.sh
+source $CURRENT_DIR/reg_savecmd.sh
+source $CURRENT_DIR/reg_wcmd.sh
+source $CURRENT_DIR/reg_cclip.sh
+source $CURRENT_DIR/reg_fcopy.sh
+source $CURRENT_DIR/reg_gitpush.sh
+source $CURRENT_DIR/reg_find1.sh
+source $CURRENT_DIR/reg_compare_dir.sh
+source $CURRENT_DIR/reg_proxy.sh
+source $CURRENT_DIR/reg_gitcontribute.sh
 
-if [ -f "$CURRENT_DIR/reg_path.sh" ]; then
-  source "$CURRENT_DIR/reg_path.sh"
+if [ -f $CURRENT_DIR/reg_path.sh ]; then
+  source $CURRENT_DIR/reg_path.sh
 fi
