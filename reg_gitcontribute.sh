@@ -1,7 +1,7 @@
 #!/bin/bash
 
 gitcontribute() {
-  git log --all --format='%aN|%aE' | sort | uniq -c | sort -nr | awk '
+  git log --all --since="7 years ago" --format='%aN|%aE' | sort | uniq -c | sort -nr | awk '
   {
     count = $1
     match($0, /[0-9]+[ \t]+/)
