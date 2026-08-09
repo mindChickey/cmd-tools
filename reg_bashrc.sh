@@ -3,7 +3,7 @@ HISTSIZE=100000
 HISTFILESIZE=200000
 HISTTIMEFORMAT="%F %T "
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\t]\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1='${debian_chroot:+($debian_chroot)}\[\e]0;\w\a\]\[\033[01;32m\][\t]\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\$ '
 
 vd(){
   builtin cd "${1:-$HOME}"
@@ -38,3 +38,5 @@ clang-asm() {
 }
 
 alias oclip='xclip -selection clipboard -o'
+
+alias bunwatch='bun build --outdir . --watch'
