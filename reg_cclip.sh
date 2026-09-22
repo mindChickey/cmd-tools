@@ -8,3 +8,7 @@
 cclip() {
   "$@" 2>&1 | tee >(perl -0777 -pe 's/\s+$//' | xclip -selection clipboard)
 }
+
+ccpath() {
+  realpath "$1" | tr -d '\n' | xclip -selection clipboard
+}
