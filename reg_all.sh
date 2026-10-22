@@ -13,6 +13,7 @@ source $CURRENT_DIR/reg_find1.sh
 source $CURRENT_DIR/reg_compare_dir.sh
 source $CURRENT_DIR/reg_proxy.sh
 source $CURRENT_DIR/reg_gitcontribute.sh
+source $CURRENT_DIR/reg_scppack.sh
 
 if [ -f $CURRENT_DIR/reg_path.sh ]; then
   source $CURRENT_DIR/reg_path.sh
