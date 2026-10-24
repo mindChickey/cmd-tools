@@ -23,6 +23,7 @@ push-path(){
 
 alias pss='ps aux | grep '
 alias tss='ss -tulpn | grep '
+alias nc1='nc -zv -w 3'
 
 alias ssh1='ssh -L 3111:localhost:3111  -L 27018:localhost:27017 server'
 alias ssfmac='sshfs mac.local:/Users/wang ~/mac.home'
